@@ -1,10 +1,10 @@
 /**@文件名: BubbleAlgorithm.java @作者： promisePB xingjian@yeah.net @日期 2011-5-9 下午10:44:25 */
 
-package com.xingjian.cn.algorithm;
+package com.promise.cn.algorithm;
 
 /**   
  * @类名: BubbleAlgorithm.java 
- * @包名: com.xingjian.cn.algorithm 
+ * @包名: com.promise.cn.algorithm
  * @描述: 冒泡法 
  * @作者： promisePB xingjian@yeah.net   
  * @日期： 2011-5-9 下午10:44:25 
