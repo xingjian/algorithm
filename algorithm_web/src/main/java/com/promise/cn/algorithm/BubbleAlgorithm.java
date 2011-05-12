@@ -22,17 +22,34 @@ public class BubbleAlgorithm {
 		return null;
 	} 
 	
-	public int[] bubbleForInt(int[] array){
-		return null;
-	}
-	
 	/**
-	 * 功能：
-	 * 描述：
-	 * @param args
+	 * 
+	 * 功能：采用冒泡法对数组排序
+	 * 描述：当isDesc为true,从大到小排序，为false,从小到大
+	 * @param array
+	 * @param isDesc 是否递减
+	 * @return 将排序好的集合返回
 	 */
-	public static void main(String[] args) {
-
+	public int[] bubbleForInt(int[] array,boolean isDesc){
+		
+		for(int i=0;i<array.length;i++){
+			for(int j=1;j<array.length-i;j++){
+				if(isDesc){//降序
+					if(array[j-1]<array[j]){
+						int temp = array[j-1];
+						array[j-1] = array[j];
+						array[j] = temp;
+					}
+				}else{//升序
+					if(array[j-1]>array[j]){
+						int temp = array[j-1];
+						array[j-1] = array[j];
+						array[j] = temp;
+					}
+				}
+			}
+		}
+		return array;
 	}
 
 }
