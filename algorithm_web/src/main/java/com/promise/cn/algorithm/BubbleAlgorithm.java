@@ -24,7 +24,7 @@ public class BubbleAlgorithm {
 	
 	/**
 	 * 
-	 * 功能：采用冒泡法对数组排序
+	 * 功能：采用冒泡法对数组排序(整型)
 	 * 描述：当isDesc为true,从大到小排序，为false,从小到大
 	 * @param array
 	 * @param isDesc 是否递减

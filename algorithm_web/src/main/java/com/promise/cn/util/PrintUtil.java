@@ -14,9 +14,8 @@ package com.promise.cn.util;
 public class PrintUtil {
 	
 	/**
-	 * 
 	 * 功能：输出对象的内容
-	 * 描述：对象可以是任何内容
+	 * 描述：对象可以是任何内容,具体包括int[]
 	 * @param object
 	 */
 	public static void printObject(Object object){
