@@ -4,7 +4,6 @@ package algorithm;
 
 import org.junit.Before;
 import org.junit.Test;
-
 import com.promise.cn.algorithm.BubbleAlgorithm;
 import com.promise.cn.util.PrintUtil;
 
