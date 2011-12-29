@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
-
 import com.promise.cn.algorithm.SimplexAlgorithm;
 import com.promise.cn.vo.LPModel;
 /**
@@ -22,6 +21,22 @@ public class SimplexAlgorithmTest {
 	private List<String> restraintCondition;
 	private SimplexAlgorithm sa;
 	
+	/**
+	 * 例题1 true
+	 * targetFunction = "max,2:x1,3:x2";
+	 * String[] strArray = {"8,than,1:x1,2:x2","16,than,4:x1","12,than,4:x2"};
+	 * x(4,2,0,0,4)
+	 * 例题2 true
+	 * targetFunction = "max,2:x1,4:x2";
+	 * String[] strArray = {"8,than,1:x1,2:x2","12,than,4:x2","12,than,3:x1"};
+	 * 例题3 false
+	 * targetFunction = "min,-3:x1,1:x2,1:x3";
+	 * String[] strArray = {"11,than,1:x1,2:x2,1:x3","3,less,-4:x1,1:x2,2:x3","1,equal,-2:x1,1:x3"};
+	 * 例题4 true
+	 * targetFunction = "max,5:x1,2:x2,3:x3,-1:x4,1:x5";
+	 * String[] strArray = {"8,equal,1:x1,2:x2,2:x3,1:x4","7,equal,3:x1,4:x2,1:x3,1:x5"};
+	 * x(6/5,0,17/5,0,0)
+	 */
 	@Before
 	public void preparedData(){
 		targetFunction = "max,2:x1,3:x2";
@@ -49,5 +64,6 @@ public class SimplexAlgorithmTest {
 	public void testInitRequiredData(){
 		LPModel lpm = new LPModel(targetFunction, restraintCondition);
 		sa.initRequiredData(lpm);
+		sa.calcSimplex();
 	}
 }

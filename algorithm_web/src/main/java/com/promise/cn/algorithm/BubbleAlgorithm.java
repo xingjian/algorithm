@@ -31,7 +31,6 @@ public class BubbleAlgorithm {
 	 * @return 将排序好的集合返回
 	 */
 	public int[] bubbleForInt(int[] array,boolean isDesc){
-		
 		for(int i=0;i<array.length;i++){
 			for(int j=1;j<array.length-i;j++){
 				if(isDesc){//降序

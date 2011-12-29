@@ -62,9 +62,7 @@ public class LPModel {
 				String cx = strArray[i];
 				String[] cxArray = cx.split(":");
 				if(i==1){
-					if(Double.parseDouble(cxArray[0])>0){//是正数和负数
-						content.append(cxArray[0]+"*"+cxArray[1]);
-					}
+					content.append(cxArray[0]+"*"+cxArray[1]);
 				}else{
 					if(Double.parseDouble(cxArray[0])>=0){//是正数
 						content.append("+"+cxArray[0]+"*"+cxArray[1]);
@@ -94,9 +92,7 @@ public class LPModel {
 					String rcsubStr = rcArray[j];
 					String[] rcsubArray = rcsubStr.split(":");
 					if(j==2){
-						if(Double.parseDouble(rcsubArray[0])>0){//是正数和负数
-							content.append(rcsubArray[0]+"*"+rcsubArray[1]);
-						}
+						content.append(rcsubArray[0]+"*"+rcsubArray[1]);
 					}else{
 						if(Double.parseDouble(rcsubArray[0])>0){//是正数
 							content.append("+"+rcsubArray[0]+"*"+rcsubArray[1]);
@@ -136,7 +132,7 @@ public class LPModel {
 					str1 = str1+",1:x"+(x_MaxIndex+addX);
 					restraintCondition.set(i,str1);
 				}else if(rcArray[1].equals("less")){
-					String str1 = rcStr.replace("than", "equal");
+					String str1 = rcStr.replace("less", "equal");
 					str1 = str1+",-1:x"+(x_MaxIndex+addX);
 					restraintCondition.set(i,str1);
 				}
@@ -149,6 +145,15 @@ public class LPModel {
 			content.append("不用添加松弛变量："+"\t\n");
 		}
 		return "0";
+	}
+	
+	@Override
+	public String toString(){
+		String retStr = targetFunction+"\t\n";
+		for(int i=0;i<restraintCondition.size();i++){
+			retStr = retStr + restraintCondition.get(i)+"\t\n";
+		}
+		return retStr;
 	}
 	
 	public String getTargetFunction() {
