@@ -4,7 +4,7 @@
 	<groupId>com.promise.cn.algorithm</groupId>
 	<version>1.0.0</version>
 	<artifactId>algorithm</artifactId>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>algorithm</name>
 	<dependencies>
 		<dependency>
@@ -35,6 +35,14 @@
 					</compilerArguments>
 				</configuration>
 			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
+				</configuration>
+			</plugin>
 		</plugins>
+		<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
+		<testOutputDirectory>src/main/webapp/WEB-INF/test-classes</testOutputDirectory>
 	</build>
 </project>        
