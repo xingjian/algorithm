@@ -35,4 +35,12 @@ public class JavaTest {
 		System.out.println(jt.getNumber(0,-256));
 		System.out.println(Double.parseDouble("-3"));
 	}
+	
+	/**
+	 * 正则表达式
+	 */
+	public void testStr(){
+		
+	}
+	
 }
